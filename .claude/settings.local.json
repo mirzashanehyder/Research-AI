@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"c:\\\\Users\\\\mirza\\\\OneDrive\\\\Desktop\\\\ResearchAI\" && mkdir -p backend/models backend/routers backend/agents backend/utils && echo \"Dirs created\")",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(./node_modules/.bin/tailwindcss init *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(python -m venv venv)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(curl -s http://localhost:8000/docs)",
+      "Bash(curl -s http://localhost:8000/openapi.json)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('Title:', d['info']['title']\\); print\\('Routes:', [r for r in d['paths']]\\)\")",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(pg_isready -h localhost -p 5432)",
+      "Bash(pkill -f \"uvicorn main:app\")",
+      "Bash(grep -v \"//\\\\|import\\\\|export\")",
+      "Bash(HF_HUB_OFFLINE=1 \"venv/Scripts/uvicorn.exe\" main:app --reload --port 8000)",
+      "Bash(taskkill /F /IM uvicorn.exe)",
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(curl -s -o /dev/null -D - -X OPTIONS \"http://localhost:8000/auth/register\" -H \"Origin: http://localhost:5175\" -H \"Access-Control-Request-Method: POST\" -H \"Access-Control-Request-Headers: Content-Type\")",
+      "Bash(HF_HUB_OFFLINE=1 \"venv/Scripts/uvicorn.exe\" main:app --port 8000)",
+      "Bash(curl -s -o /dev/null -D - -X OPTIONS \"http://localhost:8000/auth/register\" -H \"Origin: http://localhost:5175\" -H \"Access-Control-Request-Method: POST\" -H \"Access-Control-Request-Headers: Content-Type,Authorization\")",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":8000\")",
+      "Bash(venv/Scripts/python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload)",
+      "Bash(cmd.exe /c \"start cmd.exe /k \\\\\"cd /d C:\\\\\\\\Users\\\\\\\\mirza\\\\\\\\OneDrive\\\\\\\\Desktop\\\\\\\\ResearchAI\\\\\\\\backend && venv\\\\\\\\Scripts\\\\\\\\python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload\\\\\"\")",
+      "Bash(cmd.exe /c start cmd.exe /k \"cd /d C:\\\\\\\\Users\\\\\\\\mirza\\\\\\\\OneDrive\\\\\\\\Desktop\\\\\\\\ResearchAI\\\\\\\\backend && venv\\\\\\\\Scripts\\\\\\\\python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload\")",
+      "Bash(cmd.exe /c start cmd.exe /k \"cd /d C:\\\\\\\\Users\\\\\\\\mirza\\\\\\\\OneDrive\\\\\\\\Desktop\\\\\\\\ResearchAI\\\\\\\\frontend && npm run dev\")",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(venv/Scripts/python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(curl -s -X POST http://localhost:8000/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test User\",\"email\":\"test@example.com\",\"password\":\"password123\"}' -w '\\\\nHTTP_STATUS:%{http_code}')",
+      "Bash(venv/Scripts/python.exe -c ' *)",
+      "Bash(venv/Scripts/python.exe -c \"import bcrypt; print\\(bcrypt.__version__\\)\")",
+      "Bash(venv/Scripts/python.exe -c \"import bcrypt; print\\('bcrypt', bcrypt.__version__, 'OK'\\)\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\mirza\\OneDrive\\Desktop\\ResearchAI\\backend"
+    ]
+  }
+}

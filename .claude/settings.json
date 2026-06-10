@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(venv/Scripts/python.exe -c ' *)",
+      "Bash(curl -s -X POST http://localhost:8000/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test User\",\"email\":\"verify@example.com\",\"password\":\"password123\"}' -w '\\\\nHTTP_STATUS:%{http_code}')",
+      "Bash(venv/Scripts/python.exe -m uvicorn main:app --host 127.0.0.1 --port 8005)",
+      "Bash(curl -s -X POST http://127.0.0.1:8005/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test\",\"email\":\"e2@ex.com\",\"password\":\"pw12345\"}' -w '\\\\nHTTP_STATUS:%{http_code}')",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(tasklist //FI \"PID eq 4348\")",
+      "Bash(tasklist //FI \"PID eq 34396\")",
+      "Bash(tee /tmp/uv_live.log)",
+      "Bash(curl -s -X POST http://localhost:8000/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test\",\"email\":\"e3@ex.com\",\"password\":\"pw12345\"}' -w '\\\\nHTTP_STATUS:%{http_code}')",
+      "Bash(curl -s -X POST http://localhost:8000/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test\",\"email\":\"e4@ex.com\",\"password\":\"pw12345\"}')",
+      "Bash(curl -sv -X POST http://localhost:8000/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test\",\"email\":\"e4@ex.com\",\"password\":\"pw12345\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test\",\"email\":\"e6@ex.com\",\"password\":\"pw12345\"}')",
+      "Bash(tasklist //FI \"PID eq 16888\")",
+      "Bash(Read C:/Users/mirza/AppData/Local/Temp/claude/c--Users-mirza-OneDrive-Desktop-ResearchAI/c44f4fea-4fc5-4ba5-a5da-09b094457b56/tasks/bk8ihhc2d.output)",
+      "Bash(wmic process *)",
+      "Bash(tasklist //FI \"STATUS eq RUNNING\")",
+      "Bash(curl -s -X POST http://localhost:8000/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Final Test\",\"email\":\"finaltest@example.com\",\"password\":\"test1234\"}' -w '\\\\nHTTP:%{http_code}')",
+      "Bash(curl -s -X POST http://localhost:8000/auth/login -H 'Content-Type: application/json' -d '{\"email\":\"finaltest@example.com\",\"password\":\"test1234\"}' -w '\\\\nHTTP:%{http_code}')",
+      "PowerShell(docker info 2>&1)",
+      "PowerShell(Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd 'C:\\\\Users\\\\mirza\\\\OneDrive\\\\Desktop\\\\ResearchAI\\\\backend'; .\\\\venv\\\\Scripts\\\\Activate.ps1; uvicorn main:app --reload --port 8000 2>&1 | Tee-Object -FilePath 'C:\\\\Users\\\\mirza\\\\AppData\\\\Local\\\\Temp\\\\backend.log'\" -WindowStyle Normal)",
+      "PowerShell(Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd 'C:\\\\Users\\\\mirza\\\\OneDrive\\\\Desktop\\\\ResearchAI\\\\frontend'; npm run dev 2>&1 | Tee-Object -FilePath 'C:\\\\Users\\\\mirza\\\\AppData\\\\Local\\\\Temp\\\\frontend.log'\" -WindowStyle Normal)",
+      "Read(//c/Users/mirza/AppData/Local/Temp/**)"
+    ]
+  }
+}
